@@ -1,0 +1,14 @@
+<h2>
+  Todo App
+</h2>
+<div>
+  <div>
+    <input type="text" (change)="onChange($event.target.value)">
+  </div>
+
+  <ul>
+    <li (click)="toggleTodo(i)" *ngFor="let todo of todos; index as i"  [class.complete]="todo.complete">
+      {{todo.content}}
+    </li>
+  </ul>
+</div>
